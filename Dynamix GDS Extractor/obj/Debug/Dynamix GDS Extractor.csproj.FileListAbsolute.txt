@@ -1,0 +1,9 @@
+D:\Dementia\Software\Dynamix GDS Extractor\Dynamix GDS Extractor\obj\Debug\Dynamix GDS Extractor.csproj.GenerateResource.Cache
+D:\Dementia\Software\Dynamix GDS Extractor\Dynamix GDS Extractor\obj\Debug\Dynamix_GDS_Extractor.MainForm.resources
+D:\Dementia\Software\Dynamix GDS Extractor\Dynamix GDS Extractor\bin\Debug\Dynamix GDS Extractor.exe.config
+D:\Dementia\Software\Dynamix GDS Extractor\Dynamix GDS Extractor\bin\Debug\Dynamix GDS Extractor.exe
+D:\Dementia\Software\Dynamix GDS Extractor\Dynamix GDS Extractor\bin\Debug\Dynamix GDS Extractor.pdb
+D:\Dementia\Software\Dynamix GDS Extractor\Dynamix GDS Extractor\obj\Debug\Dynamix_GDS_Extractor.Properties.Resources.resources
+D:\Dementia\Software\Dynamix GDS Extractor\Dynamix GDS Extractor\obj\Debug\Dynamix GDS Extractor.exe
+D:\Dementia\Software\Dynamix GDS Extractor\Dynamix GDS Extractor\obj\Debug\Dynamix GDS Extractor.pdb
+D:\Dementia\Software\Dynamix GDS Extractor\Dynamix GDS Extractor\obj\Debug\Dynamix GDS Extractor.csprojResolveAssemblyReference.cache
