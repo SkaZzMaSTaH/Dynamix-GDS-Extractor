@@ -77,8 +77,30 @@ namespace FileFormat.Chunk
             uint szEncode = 0x00;
             uint szDecode = 0x00;
 
-            if (typeCompression == 0x00 || typeCompression == 0x01) { return; }     // 0x01 = Willy Beamish
-            if (typeCompression == 0x02)
+            if (typeCompression == 0x00)        // None
+            {
+                return;
+            }
+            if (typeCompression == 0x01)        // RLE
+            {
+                szEncode = (uint)(_content.Length - START_ENCODE);
+                szDecode = BitConverter.ToUInt32(new byte[4] { _content[1], _content[2], _content[3], _content[4] }, 0);
+
+                if (szDecode == 0) { return; }
+
+                encodeData = new byte[szEncode];
+                decodeData = new byte[szDecode];
+                resultData = new byte[szDecode + START_ENCODE];
+
+                Array.Copy(_content, START_ENCODE, encodeData, 0, szEncode);
+
+                decodeData = Lib.RLE.Decompress(szDecode, encodeData);
+
+                resultData[0] = 0x00;       // Set type compression = 0;
+                Array.Copy(_content, 1, resultData, 1, 4);
+                Array.Copy(decodeData, 0, resultData, START_ENCODE, decodeData.Length);
+            }
+            if (typeCompression == 0x02)        // LZW
             {
                 szEncode = (uint)(_content.Length - START_ENCODE);
                 szDecode = BitConverter.ToUInt32(new byte[4] { _content[1], _content[2], _content[3], _content[4] }, 0);
